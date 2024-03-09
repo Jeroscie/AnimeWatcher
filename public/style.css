@@ -1,0 +1,172 @@
+body {
+  background-color: black;
+  font-family: Source Code Pro;
+  margin: 0; 
+  padding: 0; 
+}
+
+/* loading bar */ 
+/* Loader */
+.loader {
+  display: block;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border: 8px solid #f3f3f3;
+  border-top: 8px solid #3498db;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  animation: spin 2s linear infinite;
+  z-index: 9999;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+/* Hide loader by default */
+.loader {
+  display: none;
+}
+
+
+.popular-text {
+  text-align: center;
+  margin-bottom: 20px; 
+  color: white;
+}
+
+#header-container {
+  display: flex;
+  align-items: center; 
+  justify-content: space-between; 
+  margin-top: 20px; 
+  padding: 0 20px; 
+}
+
+#logo {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start; 
+  margin-top: 20px; 
+  margin-bottom: 20px; 
+  padding-left: 20px; 
+}
+
+#anime {
+  color: white; 
+  font-size: 24px;
+}
+
+#watcher {
+  color: #3498db; 
+  font-size: 24px; 
+  margin-left: 5px;
+}
+.search-container {
+  display: flex; 
+  align-items: center; 
+  margin-bottom: 20px; 
+}
+
+#search-input {
+  padding: 8px;
+  width: 200px;
+  margin: 0 auto; 
+}
+
+p {
+  color: aliceblue;
+}
+
+/* ANIME DESIGN */
+/* Add this CSS rule to display anime image and name next to each other */
+
+.anime-container {
+  margin-left: 30px; /* Adjust margin as needed */
+}
+
+.anime-container .anime-item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.anime-container .anime-item img {
+  max-width: 100px; /* Adjust the max-width as needed */
+  margin-right: 10px;
+}
+
+.anime-container .anime-item h2 {
+  color: white;
+  font-size: 18px;
+  margin: 0;
+}
+
+/* Slider container */
+.recent-slider-container {
+  position: relative;
+  overflow: hidden; /* Ensure only one slide is visible */
+  margin-bottom: 20px;
+}
+
+
+/* Each slide item */
+.slide-item {
+  position: relative; /* Add position relative */
+  display: flex;
+  justify-content: center; /* Center the content horizontally */
+  align-items: center; /* Center the content vertically */
+  flex-direction: column; /* Stack items vertically */
+  flex: 0 0 100%; /* Each slide takes full width */
+  margin-right: 20px; /* Adjust spacing between slides */
+}
+
+/* Each anime image */
+.slide-item img {
+  max-width: 200px; /* Set a maximum width for the image */
+  height: auto; /* Maintain aspect ratio */
+}
+
+/* Anime title */
+.slide-item p {
+  position: absolute;
+  bottom: 0; /* Position at the bottom */
+  background-color: rgba(0, 0, 0, 0.7); /* Semi-transparent background */
+  width: 100%; /* Full width */
+  padding: 10px; /* Add some padding */
+  text-align: center; /* Center text horizontally */
+  color: white; /* Text color */
+}
+
+
+/* Slide container */
+.slide-container {
+  display: flex;
+  transition: transform 0.5s ease; /* Add transition for smooth sliding */
+}
+
+/* Previous and Next buttons */
+.prev,
+.next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: #3498db;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  cursor: pointer;
+  z-index: 1; /* Ensure buttons are above slides */
+}
+
+.prev {
+  left: 0;
+}
+
+.next {
+  right: 0;
+}
